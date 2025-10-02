@@ -305,7 +305,7 @@ footer {
 
             li {
                 margin: 10px;
-                border-left: 1pt solid var(--color-values);
+                /* border-left: 1pt solid var(--color-values); */
                 /* list-style-position: inside; */
                 
                 /* Found ::marker selector mentioned on a stackoverflow discussion on an updated version to change how it looks*/
