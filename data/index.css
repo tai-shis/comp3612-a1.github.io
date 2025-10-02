@@ -1,0 +1,617 @@
+:root {
+    --color-header: #2d3e50;
+    --color-header-hover: #2e4c5d;
+    --color-button: #3697d8;
+    --color-button-hover: #2f88c4;
+    --color-button-deactivated: #95a5a6;
+    --color-subsecton: #f8f9fb;
+    --color-footer: #2d3e50;
+    --color-values: #3498db;
+    --color-subtext: rgba(0, 0, 0, 0.75);
+    --color-star: #f39c12;
+    --color-beige: #fff9dd;
+    --color-grey: #708090;
+    --color-blue: #191970;
+    --color-red: #ff4500;
+    --color-bar: #e5e5e5;
+    --color-hr: #f0f0f0;
+}
+
+body, div {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header, as you can see :D */
+header {
+    background-color: var(--color-header);
+    padding: 20px 80px;
+    margin: 0;
+    display: flex;
+
+    #comp {
+        font-size: 20px;
+        font-weight: 800;
+        color: white;
+        margin: 0;
+    }
+
+    nav {
+        margin-left: auto;
+        
+        a {
+            border: 1pt solid var(--color-header);
+            border-radius: 10px;
+            background-color: var(--color-header);
+            padding: 10px;
+            margin: auto 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        
+            &:hover {
+                border: 1pt solid var(--color-header-hover);
+                background-color: var(--color-header-hover);
+            }
+        }
+    }
+}
+
+/* Highlight nav button that we are currently on */
+.current {
+    border: 1pt solid var(--color-header-hover);
+    background-color: var(--color-header-hover);
+}
+
+/* General Button Shenanigans */
+.button {
+    border: 1pt solid var(--color-button);
+    background-color: var(--color-button);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+    
+    &:hover {
+        border: 1pt solid var(--color-button-hover);
+        background-color: var(--color-button-hover);
+    }
+}
+
+h2 {
+    font-size: 26px;
+}
+
+.card {
+    padding: 10px 10px 20px 10px;
+    margin: 10px;
+    border: 1pt solid black;
+    display: inline-block;
+}
+
+.price {
+    color: red;
+}
+
+section#hero {
+    height: 250px;
+    background-image: url('./images/closet.jpg');
+    background-size: cover;
+    padding: 40px;
+    text-align: center;
+
+    p {
+        margin: 50px;
+    }
+}
+
+
+#featured {
+    text-align: center;
+    padding: 10px 10px 40px 10px;
+    
+    h2 {
+        margin: 30px;
+    }
+    
+    .name {
+        margin-bottom: 10px;
+    }
+    
+    .price {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+#choose {
+    background-color: var(--color-subsecton);
+    padding: 40px 200px;
+    text-align: center;
+}
+
+/* Footer, self explanatory */
+footer {
+    background-color: var(--color-footer);
+    padding: 15px 128px;
+    text-align: center;
+    color: white; 
+
+    #quick-links {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            margin: auto;
+    
+            ul {
+                list-style: none;
+                padding: 0;
+
+                a {
+                    color: rgba(255, 255, 255, 0.75);
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    hr {
+        color: rgba(255, 255, 255, 0.10);
+    }
+}
+
+/* About.html specific css */
+#about-page {
+    section:nth-child(odd) {
+        background-color: var(--color-subsecton);
+    }
+
+    #about {
+        text-align: center;
+        padding: 10px;
+
+        p {
+            color: var(--color-subtext);
+        }
+    }
+
+    #story {
+        text-align: left;
+        
+        div {
+            width: 600px;
+            margin: auto;
+            padding: 20px 20px 40px;
+
+            img {
+                object-fit: cover;
+                overflow: hidden; 
+                width: 590px;
+                height: 350px;
+                border: 1pt solid rgba(0, 0, 0, 0.50);
+                border-radius: 20px;
+            }
+
+            p {
+                color: var(--color-subtext);
+            }
+        }
+    }
+
+    /* little circle icon element 'global-ish' definition, only used in about.html :) */
+    .icon {
+        /* Do border color in specific instances. */
+        text-align: center;
+        margin: auto;
+        padding: 10px;
+        border-radius: 1pt;
+        border-style: solid; 
+        border-radius: 50%;
+    }
+    
+    #values {
+        padding: 20px 20px 40px;
+        text-align: center;
+        
+        .cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            .card {
+                width: 250px;
+                padding: 20px;
+                
+                .icon {
+                    border-color: var(--color-values);
+                    background-color: var(--color-values);
+                    color: white;
+                    width: 1.5em;    
+                    font-size: 36px;
+                    font-weight: 800;
+                }
+                
+                p {
+                    color: var(--color-subtext);
+                }
+            }
+        }
+    }
+
+    #team {
+        padding: 40px 40px 0px;
+        text-align: center;
+        color: black;
+
+        h2 {
+            margin: 0;
+        }
+
+        .description {
+            margin: auto;
+            width: 600px; 
+        }
+        
+        .members {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            .member {
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                padding: 20px;
+                
+                .icon {
+                    padding: 0;
+                    margin: 0 auto;
+                    object-fit: cover;
+                    background-color: var(--color-subsecton);
+                    border-color: white; /* make it invisible! */
+                    width: 200px;
+                    height: 200px
+                }
+                
+                .role {
+                    color: var(--color-subtext);
+                    width: fit-content;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    #journey {
+        text-align: center;
+        padding: 20px 20px 40px;
+
+        h2 {
+            margin: 20px;
+        }
+
+        ul {
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin: auto;
+
+            li {
+                margin: 10px;
+                border-left: 1pt solid var(--color-values);
+                /* list-style-position: inside; */
+                
+                /* Found ::marker selector mentioned on a stackoverflow discussion on an updated version to change how it looks*/
+                &::marker {
+                    color: var(--color-values);
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+
+}
+
+.product-page { 
+    .tree {
+        padding: 20px 128px 20px;
+        background-color: var(--color-subsecton);
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+
+    .rating {
+        color: var(--color-star);
+    }
+
+    /* hm... */
+    .product {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 160px 20px 160px;
+        justify-content: left;
+        
+        .product-image {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-right: 40px;
+            
+                .main-image {
+                    margin: 0 40px;                    
+                    width: 400px; /* this is the width of the image */
+                }
+    
+                .sub-image {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: right;
+                    width: 400px;
+                    padding: 0 40px;
+
+                    img {
+                        margin: 10px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+        }
+        
+
+        .product-description {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: 50%;
+            margin-left: 40px;
+            
+            .product-name {
+                margin: 10px; 
+                padding: 0;
+            }
+
+            .price {
+                margin: 10px;
+                padding: 0;
+            }
+
+            p {
+                margin: 10px;
+                padding: 0;
+            }
+            
+            form {
+                margin: 10px;
+                padding: 0;
+                
+                h3 {
+                    font-weight: 800;
+                    font-size: 16px;
+                }
+
+                fieldset {
+                    border: none;
+                    padding: 0;
+                    margin: 0 0 20px 0;
+                }
+
+                fieldset.size {
+                    input {
+                        appearance: none;
+                        margin: 0;   
+                        
+                        &:checked {
+                            &+label {
+                                border: 1pt solid black;
+                                padding: 10px;
+                                margin: 0;
+                                background-color: var(--color-subsecton);
+                            }
+                        }
+
+                        &+label {
+                            border: 1pt solid rgba(0, 0, 0, 0.50);
+                            padding: 10px;
+                        }
+                    }
+                }
+
+                fieldset.color {
+                    input {
+                        appearance: none;
+                        margin: 0;
+                        
+                        &[id="beige"] {
+                            &:checked {
+                                &+label {
+                                    border: 1pt solid black;
+
+                                }
+                            }
+
+                            &+label {
+                                margin-left: 0;
+                                background-color: var(--color-beige);
+                                border: 1pt solid rgba(0, 0, 0, 0.10);
+                            }
+                        }
+                        &[id="grey"] {
+                            &:checked {
+                                &+label {
+                                    border: 1pt solid black;
+
+                                }
+                            }
+
+                            &+label {
+                                background-color: var(--color-grey);
+                                border: 1pt solid rgba(0, 0, 0, 0.10);
+                            }
+                        }
+                        &[id="blue"] {
+                            &:checked {
+                                &+label {
+                                    border: 1pt solid black;
+
+                                }
+                            }
+
+                            &+label {
+                                background-color: var(--color-blue);
+                                border: 1pt solid rgba(0, 0, 0, 0.10);
+                            }
+                        }
+
+                        &[id="red"] {
+                            &:checked {
+                                &+label {
+                                    border: 1pt solid black;
+
+                                }
+                            }
+
+                            &+label {
+                                background-color: var(--color-red);
+                                border: 1pt solid rgba(0, 0, 0, 0.10);
+                            }
+                        }
+                    }
+
+                    label {
+                        padding: 10px 20px;
+                        margin: 10px;
+                        width: 100px;
+                        height: 100px;  
+                    }
+                }
+                
+                fieldset.quantity {
+                    margin-bottom: 10px;
+
+                    h3 {
+                        display: inline-block
+                    }
+
+                    input {
+                        width: 50px;
+                        height: 25px;
+                    }
+                }
+            }
+
+            input[value="Add to Cart"] {
+                margin-right: 10px;
+            }
+
+            input[value="Add to Wishlist"] {
+                margin-left: 10px;
+                border-color: var(--color-button-deactivated);
+                background-color: var(--color-button-deactivated);
+            }
+        }
+    }
+
+    hr {
+        margin: 0 200px;
+        color: var(--color-hr);
+        opacity: 20%;
+    }
+
+    .product-info {
+        padding: 20px 200px;
+
+        .product-tabs {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1pt solid var(--color-bar);
+            
+            h3 {
+                padding: 0 20px 20px;
+                margin-bottom: 0;
+                font-size: 16px;
+
+                &.tab-description {
+                    color: var(--color-button);
+                    border-bottom: 1pt solid var(--color-button);
+                }
+            }
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        /* Theres a small gap between rows, but who cares :D */
+        table {
+            text-align: left;
+            width: 100%;
+            
+            tr {
+                padding: 0;
+                
+                th {
+                    margin: 0;
+                    background-color: var(--color-subsecton);
+                    border: none;
+                    border-bottom: 1pt solid var(--color-bar);
+                    padding: 20px;
+                    width: 25%;
+                }
+
+                td {
+                    margin: 0;
+                    background-color: none;
+                    border: none;
+                    border-bottom: 1pt solid var(--color-bar);
+                    padding: 20px;
+                    width: 75%;
+                }
+            }
+        }
+
+
+        .reviews {
+            padding-bottom: 40px;
+            
+            .review {
+                padding: 20px 0 0;
+                border-bottom: 1pt solid var(--color-bar);
+    
+                .review-info {
+                    display: flex;
+                    flex-direction: row;
+                    
+                    h3 {
+                        margin: 0 10px 0 0;
+                        font-size: 16px;
+                    }
+    
+                    .rating {
+                        margin: 0 10px;
+                    }
+                    
+                    .date {
+                        margin: 0 10px;
+                        color: var(--color-subtext);
+                    }
+                }
+            }
+        }
+    }
+}

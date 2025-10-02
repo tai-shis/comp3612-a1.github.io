@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='index.css' />
+    </head>
+    <body>
+        <header>
+            <h2 id="comp">COMP3612 Assignment 1</h2>
+            <nav>
+                <a class="current" href="index.html">Home</a>
+                <a href="#">Shop</a>
+                <a href="about.html">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Cart (0)</a>
+            </nav>
+        </header>
+        <main class="product-page">
+            <!-- Class cause itll be used on other pages -->
+            <section class="tree">
+                <span><a href="index.html">Home</a> > <a href="#">Sweaters</a> > Merino Cable Knit Sweater</span> 
+            </section>
+            <section class="product">
+                <div class="product-image">
+                    <figure class="main-image">
+                        <img src="images/003-medium-front.png" alt="">
+                    </figure>
+                    <div class="sub-image">
+                        <img src="images/003-thumb-back.png" alt="">
+                        <img src="images/003-thumb-back-angle.png" alt="">
+                        <img src="images/003-thumb-front-angle.png" alt="">
+                    </div>
+                </div>
+                <div class="product-description">
+                    <h1 class="product-name">Merino Cable Knit Wool Sweater</h1>
+                    <p class="rating">★☆☆☆☆ (1.3/5) - 3 review(s)</p>
+                    <h2 class="price">$199.99</h2>
+                    <p>
+                        This luxorious cable knit sweater is made from 100% merino wool
+                        for exceptional warmth and softness. The class cable knit pattern
+                        adds timeless texture and visual interest to this versatile piece.
+                        Natural temperature regulation properties make it perfect for 
+                        Calgary's bipolar weather.
+                    </p>
+                    <form method="post" action="https://www.randyconnolly.com/tests/process.php">
+                        <fieldset class="size">
+                            <h3>Size:</h3>
+                            <input type="radio" id="xs" name="size" value="XS">
+                            <label for="xs">XS</label>
+                            <input type="radio" id="s" name="size" value="S">
+                            <label for="s">S</label>
+                            <input type="radio" id="m" name="size" value="M">
+                            <label for="m">M</label>
+                            <input type="radio" id="l" name="size" value="L">
+                            <label for="l">L</label>
+                            <input type="radio" id="xl" name="size" value="XL">
+                            <label for="xl">XL</label>
+                            <input type="radio" id="xxl" name="size" value="XXL">
+                            <label for="xxl">XXL</label>
+                        </fieldset>
+                        <fieldset class="color">
+                            <h3>Color:</h3>
+                            <input type="radio" id="beige" name="color" value="beige">
+                            <label for="beige"></label>
+                            <input type="radio" id="grey" name="color" value="grey">
+                            <label for="grey"></label>
+                            <input type="radio" id="blue" name="color" value="blue">
+                            <label for="blue"></label>
+                            <input type="radio" id="red" name="color" value="red">
+                            <label for="red"></label>
+                        </fieldset>
+                        <fieldset class="quantity">
+                            <h3>Quantity:</h3>
+                            <input type="number" name="quantity" value="1">
+                        </fieldset>
+                        <input class="button" type="submit" value="Add to Cart">
+                        <input class="button" type="submit" value="Add to Wishlist">
+                    </form>
+                </div>
+            </section>
+            <hr>
+            <section class="product-info">
+                <div class="product-tabs">
+                    <h3 class="tab-description">Description</h3>
+                    <h3 class="tab-specification">Specification</h3>
+                    <h3 class="tab-care">Care Instructions</h3>
+                </div>
+                <h2>Product Details</h2>
+                <p>
+                    This luxorious cable knit sweater is made from 100% merino wool for exceptional
+                    warmth and softness. The classic cable pattern adds timeless texture and visual interest
+                    to this versatile piece. Natural temperature regulation properties make it perfect for
+                    Calgary's bipolar weather.
+                </p>
+                <h3>Key Features:</h3>
+                <table>
+                    <tr>
+                        <th>Material</th>
+                        <td>100% premium merino wool</td>
+                    </tr>
+                    <tr>
+                        <th>Style</th>
+                        <td>Classic cable knit pattern</td>
+                    </tr>
+                    <tr>
+                        <th>Closures</th>
+                        <td>Riffed cuffs and hem</td>
+                    </tr>
+                    <tr>
+                        <th>Care</th>
+                        <td>Dry clean recommended</td>
+                    </tr>
+                </table>
+                <div class="reviews">
+                    <div class="review">
+                        <h2>Customer Reviews</h2>
+                        <div class="review-info">
+                            <h3>Maria C.</h3>
+                            <p class="rating">★☆☆☆☆</p>
+                            <p class="date">March 10, 2025</p>
+                        </div>
+                        <p>Absolutely stunning sweater! The merino wool gave me rashes</p>
+                    </div>            
+                    <div class="review">
+                        <div class="review-info">
+                            <h3>Robert H.</h3>
+                            <p class="rating">★★☆☆☆</p>
+                            <p class="date">March 5, 2025</p>
+                        </div>
+                        <p>Bought this for our lead software engineer and she loves it. She put a backdoor in our package after wearing it</p>
+                    </div>
+                    <div class="review">
+                        <div class="review-info">
+                            <h3>Nina F.</h3>
+                            <p class="rating">★☆☆☆☆</p>
+                            <p class="date">February 25, 2025</p>
+                        </div>
+                        <p>Beautiful sweater but requires dry cleaning. I am lazy</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="quick-links">
+                <div id="customer-service">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div id="company">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div id="connect">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p id="copyright">&copy; 2025 COMP3612. All right reserved.</p>
+        </footer>
+    </body>
+</html>
